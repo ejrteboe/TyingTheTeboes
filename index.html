@@ -65,41 +65,35 @@
         /* Sections */
         section {
             padding: 50px 20px;
+            background-color: #EFE9E5;
+            margin-bottom: 30px;
         }
 
         /* Our Story Section */
-        #our-story {
-            display: flex;
-            background-color: #EFE9E5; /* Light wood texture color */
-        }
-
-        #our-story .text {
-            flex: 1;
-            padding: 20px;
-        }
-
         #our-story h2 {
             font-family: 'Cursive', sans-serif;
             font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         #our-story p {
             font-family: 'Arial', sans-serif;
             font-size: 16px;
             line-height: 1.5;
+            text-align: center;
         }
 
         #our-story .gallery {
-            flex: 1;
             display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         #our-story .gallery img {
             width: 100%;
+            max-width: 400px;
             height: auto;
-            margin-bottom: 10px;
             border-radius: 8px;
         }
 
@@ -128,7 +122,17 @@
         }
 
         /* Registry Section */
-        #registry a {
+        #registry {
+            text-align: center;
+        }
+
+        #registry h2 {
+            font-family: 'Cursive', sans-serif;
+            font-size: 36px;
+            color: #3E2F2F;
+        }
+
+        #registry p a {
             text-decoration: none;
             color: #3E2F2F;
             font-size: 18px;
@@ -137,7 +141,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        #registry a:hover {
+        #registry p a:hover {
             background-color: #FF8C42;
             color: #FDF8F3;
             border-color: #FF8C42;
@@ -164,35 +168,29 @@
 
     <!-- Our Story Section -->
     <section id="our-story">
-        <div class="text">
-            <h2>Our Story</h2>
-            <p>Joshua and Emily met on a hiking trip in Shenandoah, bonding over their love for nature and adventure...</p>
-            <!-- Add more story text here -->
-        </div>
+        <h2>Our Story</h2>
+        <p>Joshua and Emily met on a hiking trip in Shenandoah, bonding over their love for nature and adventure...</p>
         <div class="gallery">
-    <img id="slide" src='images/EmmieJosh1.jpg' alt="Photo 1">
-</div>
+            <img id="slide" src='images/EmmieJosh1.jpg' alt="Photo 1">
+        </div>
+    </section>
 
-<script>
-    // Array of image sources
-    const images = [
-        'images/EmmieJosh1.jpg',
-        'images/EmmieJosh2.jpg',
-        'images/EmmieJosh3.jpg'
-    ];
+    <script>
+        // Image gallery script
+        const images = [
+            'images/EmmieJosh1.jpg',
+            'images/EmmieJosh2.jpg',
+            'images/EmmieJosh3.jpg'
+        ];
+        let currentIndex = 0;
 
-    // Current image index
-    let currentIndex = 0;
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('slide').src = images[currentIndex];
+        }
 
-    // Function to change the image
-    function changeImage() {
-        currentIndex = (currentIndex + 1) % images.length; // Loop through images
-        document.getElementById('slide').src = images[currentIndex];
-    }
-
-    // Change image every 5 seconds
-    setInterval(changeImage, 5000);
-</script>
+        setInterval(changeImage, 5000);
+    </script>
 
     <!-- Event Details Section -->
     <section id="event-details">
@@ -207,11 +205,6 @@
     <section id="registry">
         <h2>Our Registry</h2>
         <p><a href="https://www.honeyfund.com/site/TyingTheTeboes">Visit Our Honeyfund Registry</a></p>
-    </section>
-
-    <!-- RSVP Section -->
-    <section id="rsvp">
-        <!-- You can add your RSVP form here -->
     </section>
 
     <script>
@@ -246,4 +239,3 @@
     </script>
 </body>
 </html>
-
