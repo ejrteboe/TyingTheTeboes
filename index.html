@@ -170,11 +170,29 @@
             <!-- Add more story text here -->
         </div>
         <div class="gallery">
-            <img src='images/EmmieJosh1.jpg' alt="Photo 1">
-            <img src='images/EmmieJosh2.jpg' alt="Photo 2">
-            <img src='images/EmmieJosh3.jpg' alt="Photo 3">
-        </div>
-    </section>
+    <img id="slide" src='images/EmmieJosh1.jpg' alt="Photo 1">
+</div>
+
+<script>
+    // Array of image sources
+    const images = [
+        'images/EmmieJosh1.jpg',
+        'images/EmmieJosh2.jpg',
+        'images/EmmieJosh3.jpg'
+    ];
+
+    // Current image index
+    let currentIndex = 0;
+
+    // Function to change the image
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Loop through images
+        document.getElementById('slide').src = images[currentIndex];
+    }
+
+    // Change image every 5 seconds
+    setInterval(changeImage, 5000);
+</script>
 
     <!-- Event Details Section -->
     <section id="event-details">
