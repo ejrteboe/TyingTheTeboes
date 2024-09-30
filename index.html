@@ -1,158 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wedding of Joshua Teboe and Emily Reyna</title>
     <style>
-        /* General Styles */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #FDF8F3; /* Soft white background */
-            color: #3E2F2F; /* Dark brown text */
-        }
+    /* General Styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #FDF8F3; /* Soft white background */
+        color: #3E2F2F; /* Dark brown text */
+    }
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: url('images/Bluebells.jpg') no-repeat center center/cover;
-        }
+    /* Handwritten font for headers */
+    h1, h2 {
+        font-family: 'Dancing Script', cursive; /* Handwritten cursive font */
+        text-align: center;
+    }
 
-        .hero h1 {
-            font-family: 'Cursive', sans-serif;
-            font-size: 48px;
-            color: #FDF8F3;
-            text-align: center;
-            padding-top: 25vh;
-        }
+    /* Hero Section */
+    .hero {
+        position: relative;
+        height: 100vh;
+        background: url('images/Bluebells.jpg') no-repeat center center/cover;
+    }
 
-        .hero p {
-            font-family: 'Georgia', serif;
-            font-size: 24px;
-            color: #FDF8F3;
-            text-align: center;
-        }
+    .hero h1 {
+        font-size: 48px;
+        color: #FDF8F3;
+        padding-top: 25vh;
+    }
 
-        /* Sticky Navbar */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: transparent;
-            transition: background-color 0.3s ease-in-out;
-            padding: 20px;
-            text-align: center;
-        }
+    .hero p {
+        font-family: 'Georgia', serif;
+        font-size: 24px;
+        color: #FDF8F3;
+        text-align: center;
+    }
 
-        .navbar.scrolled {
-            background-color: #3C553C; /* Forest green */
-        }
+    /* Sticky Navbar */
+    .navbar {
+        position: sticky;
+        top: 0;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+        padding: 20px;
+        text-align: center;
+    }
 
-        .navbar a {
-            text-decoration: none;
-            color: #FDF8F3;
-            font-size: 18px;
-            padding: 10px;
-            transition: color 0.3s ease-in-out;
-        }
+    .navbar.scrolled {
+        background-color: #3C553C; /* Forest green */
+    }
 
-        .navbar a:hover {
-            color: #FF8C42; /* Sunset orange */
-        }
+    .navbar a {
+        text-decoration: none;
+        color: #FDF8F3;
+        font-size: 18px;
+        padding: 10px;
+        transition: color 0.3s ease-in-out;
+    }
 
-        /* Sections */
-        section {
-            padding: 50px 20px;
-            background-color: #EFE9E5;
-            margin-bottom: 30px;
-        }
+    .navbar a:hover {
+        color: #FF8C42; /* Sunset orange */
+    }
 
-        /* Our Story Section */
-        #our-story h2 {
-            font-family: 'Cursive', sans-serif;
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        #our-story p {
-            font-family: 'Arial', sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            text-align: center;
-            margin-bottom: 10px; /* Reduce bottom margin for tighter spacing */
-        }
-        
-        #our-story .gallery {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px; /* Reduce top margin to bring the gallery closer to the text */
-            margin-bottom: 0; /* Remove bottom margin to avoid extra space beneath */
-        }
-        
-        #our-story .gallery img {
-            width: 100%;
-            max-width: 500px; /* Set max width */
-            height: auto; /* Ensure height is auto to avoid stretching */
-            object-fit: contain; /* Ensure image scales appropriately */
-            background-color: #EFE9E5; /* Background color when image is smaller */
-            border-radius: 8px;
-            margin-bottom: 0; /* Remove bottom margin from the image */
-        }
+    /* Sections */
+    section {
+        padding: 50px 20px;
+        background-color: #EFE9E5;
+        margin-bottom: 30px;
+    }
 
+    /* Our Story Section */
+    #our-story h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
 
-        /* Event Details Section */
-        #event-details {
-            text-align: center;
-        }
+    #our-story p {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 10px; /* Reduce bottom margin for tighter spacing */
+    }
 
-        #event-details h2 {
-            font-family: 'Cursive', sans-serif;
-            font-size: 36px;
-            color: #3E2F2F;
-        }
+    #our-story .gallery {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px; /* Reduce top margin to bring the gallery closer to the text */
+        margin-bottom: 0; /* Remove bottom margin to avoid extra space beneath */
+    }
 
-        #event-details p {
-            font-family: 'Arial', sans-serif;
-            font-size: 18px;
-            color: #3E2F2F;
-        }
+    #our-story .gallery img {
+        width: 100%;
+        max-width: 500px; /* Set max width */
+        height: auto; /* Ensure height is auto to avoid stretching */
+        object-fit: contain; /* Ensure image scales appropriately */
+        background-color: #EFE9E5; /* Background color when image is smaller */
+        border-radius: 8px;
+        margin-bottom: 0; /* Remove bottom margin from the image */
+    }
 
-        /* Countdown Timer */
-        .countdown {
-            font-size: 24px;
-            font-family: 'Georgia', serif;
-            color: #FF8C42; /* Sunset orange */
-        }
+    /* Event Details Section */
+    #event-details h2 {
+        font-size: 36px;
+        color: #3E2F2F;
+    }
 
-        /* Registry Section */
-        #registry {
-            text-align: center;
-        }
+    #event-details p {
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        color: #3E2F2F;
+    }
 
-        #registry h2 {
-            font-family: 'Cursive', sans-serif;
-            font-size: 36px;
-            color: #3E2F2F;
-        }
+    /* Countdown Timer */
+    .countdown {
+        font-size: 24px;
+        font-family: 'Georgia', serif;
+        color: #FF8C42; /* Sunset orange */
+    }
 
-        #registry p a {
-            text-decoration: none;
-            color: #3E2F2F;
-            font-size: 18px;
-            border: 2px solid #3E2F2F;
-            padding: 10px 20px;
-            transition: all 0.3s ease-in-out;
-        }
+    /* Registry Section */
+    #registry h2 {
+        font-size: 36px;
+        color: #3E2F2F;
+    }
 
-        #registry p a:hover {
-            background-color: #FF8C42;
-            color: #FDF8F3;
-            border-color: #FF8C42;
-        }
-    </style>
+    /* Keep regular text for lines 162-163 */
+    #registry p {
+        font-family: 'Arial', sans-serif;
+    }
+
+    #registry p a {
+        text-decoration: none;
+        color: #3E2F2F;
+        font-size: 18px;
+        border: 2px solid #3E2F2F;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #registry p a:hover {
+        background-color: #FF8C42;
+        color: #FDF8F3;
+        border-color: #FF8C42;
+    }
+</style>
+    
 </head>
 <body>
 
