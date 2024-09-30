@@ -89,11 +89,13 @@
             justify-content: center;
             margin-top: 20px;
         }
-
+    
         #our-story .gallery img {
             width: 100%;
-            max-width: 400px;
-            height: auto;
+            max-width: 500px; /* Set max width */
+            height: 1024px; /* Set height */
+            object-fit: contain; /* Ensure image scales appropriately */
+            background-color: #EFE9E5; /* Background color when image is smaller */
             border-radius: 8px;
         }
 
