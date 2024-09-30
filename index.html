@@ -179,35 +179,35 @@
         </div>
     </section>
 
-    <script>
-        // Image gallery script
-        const images = [
-            'images/EmmieJosh1.jpg',
-            'images/EmmieJosh2.jpg',
-            'images/EmmieJosh3.jpg'
-            'images/EmmieJosh4.jpg'
-            'images/EmmieJosh5.jpg'
-            'images/EmmieJosh6.jpg'
-            'images/EmmieJosh7.jpg'
-            'images/EmmieJosh8.jpg'
-            'images/EmmieJosh9.jpg'
-            'images/EmmieJosh10.jpg'
-            'images/EmmieJosh11jpg'
-            'images/EmmieJosh12.jpg'
-            'images/EmmieJosh13.jpg'
-            'images/EmmieJosh14.jpg'
-            'images/EmmieJosh15.jpg'
-            'images/EmmieJosh16.jpg'
-        ];
-        let currentIndex = 0;
+<script>
+    const images = [
+        'images/EmmieJosh1.jpg',
+        'images/EmmieJosh2.jpg',
+        'images/EmmieJosh3.jpg',
+        'images/EmmieJosh4.jpg',
+        'images/EmmieJosh5.jpg',
+        'images/EmmieJosh6.jpg',
+        'images/EmmieJosh7.jpg',
+        'images/EmmieJosh8.jpg',
+        'images/EmmieJosh9.jpg',
+        'images/EmmieJosh10.jpg',
+        'images/EmmieJosh11.jpg',
+        'images/EmmieJosh12.jpg',
+        'images/EmmieJosh13.jpg',
+        'images/EmmieJosh14.jpg',
+        'images/EmmieJosh15.jpg',
+        'images/EmmieJosh16.jpg'
+    ];
 
-        function changeImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            document.getElementById('slide').src = images[currentIndex];
-        }
+    let currentIndex = 0;
 
-        setInterval(changeImage, 5000);
-    </script>
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('slide').src = images[currentIndex];
+    }
+
+    setInterval(changeImage, 5000);
+</script>
 
     <!-- Event Details Section -->
     <section id="event-details">
