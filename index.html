@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Joshua Teboe and Emily Reyna</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #FDF8F3; /* Soft white background */
+            color: #3E2F2F; /* Dark brown text */
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('scenic-forest-lake.jpg') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-family: 'Cursive', sans-serif;
+            font-size: 48px;
+            color: #FDF8F3;
+            text-align: center;
+            padding-top: 25vh;
+        }
+
+        .hero p {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            color: #FDF8F3;
+            text-align: center;
+        }
+
+        /* Sticky Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: transparent;
+            transition: background-color 0.3s ease-in-out;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar.scrolled {
+            background-color: #3C553C; /* Forest green */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #FDF8F3;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #FF8C42; /* Sunset orange */
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+        }
+
+        /* Our Story Section */
+        #our-story {
+            display: flex;
+            background-color: #EFE9E5; /* Light wood texture color */
+        }
+
+        #our-story .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #our-story h2 {
+            font-family: 'Cursive', sans-serif;
+            font-size: 36px;
+        }
+
+        #our-story p {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        #our-story .gallery {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        #our-story .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        /* Event Details Section */
+        #event-details {
+            text-align: center;
+        }
+
+        #event-details h2 {
+            font-family: 'Cursive', sans-serif;
+            font-size: 36px;
+            color: #3E2F2F;
+        }
+
+        #event-details p {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #3E2F2F;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            font-size: 24px;
+            font-family: 'Georgia', serif;
+            color: #FF8C42; /* Sunset orange */
+        }
+
+        /* Registry Section */
+        #registry a {
+            text-decoration: none;
+            color: #3E2F2F;
+            font-size: 18px;
+            border: 2px solid #3E2F2F;
+            padding: 10px 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #registry a:hover {
+            background-color: #FF8C42;
+            color: #FDF8F3;
+            border-color: #FF8C42;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>The Wedding of Joshua Teboe and Emily Reyna</h1>
+        <p>September 12, 2025</p>
+        <p>Centreville, VA</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#event-details">Event Details</a>
+        <a href="#registry">Our Registry</a>
+        <a href="#rsvp">RSVP</a>
+    </div>
+
+    <!-- Our Story Section -->
+    <section id="our-story">
+        <div class="text">
+            <h2>Our Story</h2>
+            <p>Joshua and Emily met on a hiking trip in Shenandoah, bonding over their love for nature and adventure...</p>
+            <!-- Add more story text here -->
+        </div>
+        <div class="gallery">
+            <img src="photo1.jpg" alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <img src="photo3.jpg" alt="Photo 3">
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="event-details">
+        <h2>Event Details</h2>
+        <p>Date: September 12, 2025</p>
+        <p>Location: Bull Run Regional Park, Centreville, Virginia</p>
+        <p>Dress Code: Outdoor Casual</p>
+        <div class="countdown" id="countdown-timer"></div>
+    </section>
+
+    <!-- Our Registry Section -->
+    <section id="registry">
+        <h2>Our Registry</h2>
+        <p><a href="https://www.honeyfund.com/site/TyingTheTeboes">Visit Our Honeyfund Registry</a></p>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+        <!-- You can add your RSVP form here -->
+    </section>
+
+    <script>
+        // Sticky Navbar Effect
+        window.onscroll = function() {
+            const navbar = document.getElementById('navbar');
+            if (window.pageYOffset > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        };
+
+        // Countdown Timer
+        function countdown() {
+            const weddingDate = new Date('September 12, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown-timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (difference < 0) {
+                document.getElementById('countdown-timer').innerHTML = "The wedding has started!";
+            }
+        }
+        setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
 
