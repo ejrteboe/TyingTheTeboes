@@ -89,22 +89,22 @@
     #our-story .gallery {
         display: flex;
         justify-content: center;
-        margin-top: 10px; /* Reduce top margin to bring the gallery closer to the text */
-        margin-bottom: 0; /* Remove bottom margin to avoid extra space beneath */
+        margin-top: 10px;
+    }
+    
+    #our-story .gallery img {
+        width: 100%;
+        max-width: 500px; /* The image will not grow beyond this width */
+        max-height: 500px; /* Ensure the image does not exceed 500px in height */
+        object-fit: cover; /* Maintain aspect ratio while filling the space */
+        border-radius: 8px;
+        margin-bottom: 0;
     }
 
-  #our-story .gallery img {
-    width: 100%;
-    max-width: 500px; /* The image will not grow beyond this width */
-    min-width: 300px; /* The image will not shrink below this width */
-    max-height: 700px; /* Set a fixed height */
-    min-height: 500px; 
-    object-fit: cover; /* Ensure the image maintains its aspect ratio and fills the area */
-    background-color: #EFE9E5; /* Background color when image is smaller */
-    border-radius: 8px;
-    margin-bottom: 0; /* Remove bottom margin */
-}
-
+    #our-story {
+        min-height: 1000; 
+        padding-bottom: 20px; /* Optional: Adds some space at the bottom of the section */
+    }
     /* Event Details Section */
     #event-details h2 {
         font-size: 36px;
