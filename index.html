@@ -93,15 +93,17 @@
         margin-bottom: 0; /* Remove bottom margin to avoid extra space beneath */
     }
 
-    #our-story .gallery img {
-        width: 100%;
-        max-width: 500px; /* Set max width */
-        height: auto; /* Ensure height is auto to avoid stretching */
-        object-fit: contain; /* Ensure image scales appropriately */
-        background-color: #EFE9E5; /* Background color when image is smaller */
-        border-radius: 8px;
-        margin-bottom: 0; /* Remove bottom margin from the image */
-    }
+  #our-story .gallery img {
+    width: 100%;
+    max-width: 500px; /* The image will not grow beyond this width */
+    min-width: 300px; /* The image will not shrink below this width */
+    max-height: 700px; /* Set a fixed height */
+    min-height: 500px; 
+    object-fit: cover; /* Ensure the image maintains its aspect ratio and fills the area */
+    background-color: #EFE9E5; /* Background color when image is smaller */
+    border-radius: 8px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
 
     /* Event Details Section */
     #event-details h2 {
