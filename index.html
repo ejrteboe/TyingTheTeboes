@@ -1,293 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-96ZJ773XD0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-96ZJ773XD0');
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wedding of Joshua Teboe and Emily Reyna</title>
+    <title>Tying the Teboes</title>
+    <link rel="icon" href="images/LogoInBlack.png?v=2" type="image/png">
     <style>
-    /* General Styles */
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #FDF8F3; /* Soft white background */
-        color: #3E2F2F; /* Dark brown text */
-        text-align: center; /* Center all text */
-    }
-
-    /* Handwritten font for headers */
-    h1, h2 {
-        font-family: 'Dancing Script', cursive; /* Handwritten cursive font */
-    }
-
-    /* Hero Section */
-    .hero {
-        position: relative;
-        height: 100vh;
-        background: url('images/Bluebells.jpg') no-repeat center center/cover;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-        color: #FDF8F3;
-        padding-top: 25vh;
-    }
-
-    .hero p {
-        font-family: 'Georgia', serif;
-        font-size: 24px;
-        color: #FDF8F3;
-    }
-
-    /* Sticky Navbar */
-    .navbar {
-        position: sticky;
-        top: 0;
-        background-color: transparent;
-        transition: background-color 0.3s ease-in-out;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .navbar.scrolled {
-        background-color: #3C553C; /* Forest green */
-    }
-
-    .navbar a {
-        text-decoration: none;
-        color: #FDF8F3;
-        font-size: 18px;
-        padding: 10px;
-        transition: color 0.3s ease-in-out;
-    }
-
-    .navbar a:hover {
-        color: #FF8C42; /* Sunset orange */
-    }
-
-    /* Sections */
-    section {
-        padding: 50px 20px;
-        background-color: #EFE9E5;
-        margin-bottom: 30px;
-    }
-
-    /* Our Story Section */
-    #our-story h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    #our-story p {
-        font-family: 'Arial', sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 10px; /* Reduce bottom margin for tighter spacing */
-    }
-
-    #our-story .gallery {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-    
-    #our-story .gallery img {
-        width: 100%;
-        max-width: 500px; /* The image will not grow beyond this width */
-        max-height: 700px; /* Ensure the image does not exceed 500px in height */
-        object-fit: cover; /* Maintain aspect ratio while filling the space */
-        border-radius: 8px;
-        margin-bottom: 0;
-    }
-
-    #our-story {
-        min-height: 1000; 
-        padding-bottom: 20px; /* Optional: Adds some space at the bottom of the section */
-    }
-    /* Event Details Section */
-    #event-details h2 {
-        font-size: 36px;
-        color: #3E2F2F;
-    }
-
-    #event-details p {
-        font-family: 'Arial', sans-serif;
-        font-size: 18px;
-        color: #3E2F2F;
-    }
-
-    /* Countdown Timer */
-    .countdown {
-        font-size: 24px;
-        font-family: 'Georgia', serif;
-        color: #FF8C42; /* Sunset orange */
-    }
-
-    /* Registry Section */
-    #registry h2 {
-        font-size: 36px;
-        color: #3E2F2F;
-    }
-
-    /* Keep regular text for lines 162-163 */
-    #registry p {
-        font-family: 'Arial', sans-serif;
-    }
-
-    #registry p a {
-        text-decoration: none;
-        color: #3E2F2F;
-        font-size: 18px;
-        border: 2px solid #3E2F2F;
-        padding: 10px 20px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    #registry p a:hover {
-        background-color: #FF8C42;
-        color: #FDF8F3;
-        border-color: #FF8C42;
-    }
-</style>
-    
-</head>
-
-<body id="home">
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>The Wedding of Joshua Teboe and Emily Reyna</h1>
-        <p>September 12, 2025</p>
-        <p>Centreville, VA</p>
-    </div>
-
-    <!-- Navigation Bar -->
-    <div class="navbar" id="navbar">
-        <a href="#home">Home</a>
-        <a href="#our-story">Our Story</a>
-        <a href="#event-details">Event Details</a>
-        <a href="#registry">Our Registry</a>
-        <a href="#faqs">FAQ's</a>
-    </div>
-
-    <!-- Our Story Section -->
-    <section id="our-story">
-    <h2>Our Story</h2>
-    <p>Emily first saw Joshua at the NOVA Manassas Campus bookstore, where he worked, and she was working for campus IT. For Emily, it was love at first sight. Nicknamed the "cute bookstore guy" by her family, Joshua unknowingly began to play a special role in her life.</p>
-    <p>Emily's first words to Joshua were, "How difficult can I be?" and in that moment, Joshua knew she would be a handful. Yet, it only made him more intrigued by her bold and playful personality.</p>
-    <p>During the COVID pandemic, despite masks and work windows separating them, their friendship blossomed. Through funny faces, brief passing conversations, and even shared moments behind the glass, they grew closer.</p>
-    <p>Their unique connection led to countless lunch "dates" to the grocery store, late-night snack runs, and notes scribbled on coffee cups. Finally, on January 19th, 2022, Joshua asked Emily out, and the rest, as they say, is history.</p>
-    <p>After talking and dating for over a year, Emily and Joshua took the next big step in their journey, moving in together in late October 2022. Since then, they've filled their home with love—and quite a few furry (and scaly) companions! They've welcomed three cats, Moose, Benny, and Moony, along with two tortoises, Raph (Joshua's first baby) and Peanut, as well as their leopard gecko, Casper.</p>
-        <div class="gallery">
-            <img id="slide" src='images/EmmieJosh1.jpg' alt="Photo 1">
-        </div>
-    </section>
-
-<script>
-    const images = [
-        'images/EmmieJosh1.jpg',
-        'images/EmmieJosh2.jpg',
-        'images/EmmieJosh3.jpg',
-        'images/EmmieJosh4.jpg',
-        'images/EmmieJosh5.jpg',
-        'images/EmmieJosh6.jpg',
-        'images/EmmieJosh7.jpg',
-        'images/EmmieJosh8.jpg',
-        'images/EmmieJosh9.jpg',
-        'images/EmmieJosh10.jpg',
-        'images/EmmieJosh11.jpg',
-        'images/EmmieJosh12.jpg',
-        'images/EmmieJosh13.jpg',
-        'images/EmmieJosh14.jpg',
-        'images/EmmieJosh15.jpg',
-        'images/EmmieJosh16.jpg'
-    ];
-
-    let currentIndex = 0;
-
-    function changeImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        document.getElementById('slide').src = images[currentIndex];
-    }
-
-    setInterval(changeImage, 5000);
-</script>
-
-    <!-- Event Details Section -->
-    <section id="event-details">
-        <h2>Event Details</h2>
-        <p>Date: September 12, 2025</p>
-        <p>Location: Bull Run Regional Park, Centreville, Virginia</p>
-        <p>Dress Code: Outdoor Casual – think flannels, jeans, and classy camping clothes. Come comfortable, but with a touch of rustic charm!</p>
-        <div class="countdown" id="countdown-timer"></div>
-    </section>
-
-    <!-- Our Registry Section -->
-    <section id="registry">
-        <h2>Our Registry</h2>
-        <p>Thank you so much for being a part of this special time in our lives! Your love, support, and presence mean the world to us as we embark on this exciting journey together.</p>
-        <p></p>If you would like to help us build our new life, we have created a home fund that will go towards the purchase of our new home, as well as furniture and other essentials to make it our own. Please know that your contribution is greatly appreciated, but your presence at our celebration is the most important gift of all.</p>
-        <p><a href="https://www.honeyfund.com/site/TyingTheTeboes">Visit Our Honeyfund Registry</a></p>
-    </section>
-
-    <!-- Our FAQ Section -->
-    <section id="faqs">
-        <h2>Frequently Asked Questions</h2>
-    <p><strong>What should I wear?</strong></p>
-    <p>Outdoor Casual – embrace the camp vibes with flannels, jeans, and "classy camping" attire. Think rustic elegance and comfy outdoor wear!</p>
-    <p><strong>What type of shoes should I wear?</strong></p>
-    <p>We recommend wearing flat shoes or comfortable footwear, as the terrain consists mostly of gravel paths and grassy areas. Stilettos or thin heels may not be ideal for navigating the outdoor setting. Opt for wedges, sandals, or even cute boots that fit the camp vibe!</p>
-    <p><strong>Are kids allowed?</strong></p>
-    <p>Yes, kids are welcome at our wedding! We want the celebration to be fun for guests of all ages. There will be activities and plenty of space for the little ones to enjoy themselves. However, if you need a quiet space for naps or downtime, we will do our best to have a designated area available.</p>
-    <p><strong>Is everything in the same location?</strong></p>
-    <p>Yes, all events—including the ceremony, reception, and any additional activities—will be within walking distance of each other at Bull Run Regional Park. For guests who may have difficulty walking longer distances, we will provide transportation assistance, such as utility carts, to ensure everyone can move comfortably between locations.</p>
-    <p><strong>How should I RSVP?</strong></p>
-    <p>We will be providing more information on how to RSVP as we get closer to the wedding date. Keep an eye out for a formal invitation or on this website. Your timely response is greatly appreciated so we can plan accordingly!</p>
-    <p><strong>Will the wedding be indoors or outdoors?</strong></p>
-    <p>Both the ceremony and reception will be outdoors, so plan accordingly for weather.</p>
-    <p><strong>What happens if it rains?</strong></p>
-    <p>We have a covered area for the reception, and the ceremony will take place rain or shine. Pack an umbrella just in case!</p>
-    <p><strong>Have additional questions?</strong></p>
-    <p>Please reach out to TyingTheTeboes@gmail.com and we will get right back to you!</p> </section>
-    <script>
-        // Sticky Navbar Effect
-        window.onscroll = function() {
-            const navbar = document.getElementById('navbar');
-            if (window.pageYOffset > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        };
-
-        // Countdown Timer
-        function countdown() {
-            const weddingDate = new Date('September 12, 2025 00:00:00').getTime();
-            const now = new Date().getTime();
-            const difference = weddingDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown-timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (difference < 0) {
-                document.getElementById('countdown-timer').innerHTML = "The wedding has started!";
-            }
+        @font-face {
+            font-family: 'Love Script';
+            src: url('Love script.ttf') format('truetype');
         }
-        setInterval(countdown, 1000);
-    </script>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Brush Script MT", cursive;
+            background-color: #ffeee2;
+        }
+        .logo {
+            text-align: center;
+            background-color: #f7ddbb;
+            padding: 10px 0;
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 20;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            background-color: #f7ddbb;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-family: Georgia, serif;
+        }
+        .main-content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            width: 100%;
+            background-image: url('images/flowers15.png');
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat; /* Ensure the image does not repeat */
+            min-height: 100vh;
+        }
+        .main-content .overlay {
+            font-family: 'Love Script', cursive;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        .main-content .line1 {
+            font-size: 58px;
+        }
+        .main-content .line2 {
+            font-size: 82px;
+        }
+        .main-content .date {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            margin-top: 15px;
+            color: #000;
+        }
+        .main-content .location {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            margin-top: 5px;
+            color: #000;
+        }
+        .main-content .rsvp-button {
+            margin-top: 20px;
+            background-color: #321660;
+            color: white;
+            font-size: 18px;
+            font-family: Georgia, serif;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .main-content .rsvp-button:hover {
+            background-color: #421d7e;
+        }
+        .main-content .rsvp-text {
+            font-size: small;
+            font-weight: bold;
+            margin-top: 10px;
+            font-family: Georgia, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="images/LogoInBlack.png" alt="Wedding Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="TheDetails.html">The Details</a></li>
+            <li><a href="OurStory.HTML">Our Story</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="QA.html">Q + A</a></li>
+            <li><a href="https://www.honeyfund.com/site/TyingTheTeboes" target="_blank" rel="noopener noreferrer">Registry</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <div class="overlay">
+            <div class="line1">The Wedding of</div>
+            <div class="line2">Joshua & Emily Teboe</div>
+            <div class="date">September 12th, 2025</div>
+            <div class="location">Centreville, VA</div>
+            <button class="rsvp-button">RSVP</button>
+            <div class="rsvp-text">
+                Please RSVP by August 1st!
+            </div>
+        </div>
+    </div>
 </body>
 </html>
