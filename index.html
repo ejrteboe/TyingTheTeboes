@@ -72,6 +72,10 @@
             text-align: center;
             min-height: 100vh;
             padding: 10px;
+            background-image: url('images/flowers15.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .overlay {
             max-width: 90%;
@@ -84,6 +88,26 @@
         }
         .date, .location {
             font-size: clamp(20px, 5vw, 32px);
+        }
+        .rsvp-button {
+            margin-top: 20px;
+            background-color: #321660;
+            color: white;
+            font-size: 18px;
+            font-family: Georgia, serif;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .rsvp-button:hover {
+            background-color: #421d7e;
+        }
+        .rsvp-text {
+            font-size: small;
+            font-weight: bold;
+            margin-top: 10px;
+            font-family: Georgia, serif;
         }
         @media (max-width: 768px) {
             .menu-button {
