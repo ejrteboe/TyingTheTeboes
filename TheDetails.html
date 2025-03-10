@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tying the Teboes</title>
+    <title>The Details</title>
     <link rel="icon" href="images/LogoInBlack.png?v=2" type="image/png">
     <style>
         @font-face {
             font-family: 'Love Script';
             src: url('Love script.ttf') format('truetype');
         }
+        @font-face {
+            font-family: 'Roadster';
+            src: url('roadster-free.regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Kingstyle';
+            src: url('Kingstyle.ttf') format('truetype');
+        }
         body {
             margin: 0;
             padding: 0;
-            font-family: "Brush Script MT", cursive;
+            font-family: Georgia, serif;
             background-color: #ffeee2;
+            color: black;
         }
         .logo {
             text-align: center;
@@ -35,10 +44,18 @@
             background: none;
             border: none;
             cursor: pointer;
-            position: absolute;
+            position: fixed;
             top: 15px;
             right: 20px;
             z-index: 100;
+            background-color: #f7ddbb;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav {
+            position: relative;
+            background-color: #f7ddbb;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
         }
         .nav-menu {
             display: flex;
@@ -46,8 +63,7 @@
             justify-content: center;
             list-style-type: none;
             margin: 0;
-            padding: 0;
-            background-color: #f7ddbb;
+            padding: 15px 0;
         }
         .nav-menu li {
             margin: 5px 10px;
@@ -58,6 +74,61 @@
             font-size: 18px;
             font-family: Georgia, serif;
         }
+        .title {
+            text-align: center;
+            font-family: 'Love Script', cursive;
+            font-size: clamp(40px, 8vw, 65px);
+            margin-top: 20px;
+        }
+        .details-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .text-box {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0);
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+        .text-box h2 {
+            font-size: 28px;
+            font-family: 'Roadster', sans-serif;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .text-box p {
+            font-size: 20px;
+            font-family: Georgia, serif;
+            margin-bottom: 20px;
+        }
+        .timeline {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .timeline img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .park-map-container {
+            background-color: #361c54;
+            text-align: center;
+            padding: 20px;
+        }
+        .park-map {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            cursor: pointer;
+        }
         @media (max-width: 768px) {
             .menu-button {
                 display: block;
@@ -65,7 +136,7 @@
             .nav-menu {
                 display: none;
                 flex-direction: column;
-                position: absolute;
+                position: fixed;
                 top: 50px;
                 right: 20px;
                 background-color: #f7ddbb;
@@ -81,18 +152,24 @@
                 margin: 10px 0;
                 text-align: center;
             }
+            .details-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
     <script>
-        function toggleMenu() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".menu-button").addEventListener("click", function() {
+                document.querySelector(".nav-menu").classList.toggle("active");
+            });
+        });
     </script>
 </head>
 <body>
     <div class="logo">
         <img src="images/LogoInBlack.png" alt="Wedding Logo">
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <button class="menu-button">☰</button>
     </div>
     <nav>
         <ul class="nav-menu">
@@ -105,14 +182,11 @@
             <li><a href="RSVP.html">RSVP</a></li>
         </ul>
     </nav>
-    <div class="main-content">
-        <div class="overlay">
-            <div class="line1">The Wedding of</div>
-            <div class="line2">Joshua & Emily Teboe</div>
-            <div class="date">September 12th, 2025</div>
-            <div class="location">Centreville, VA</div>
-            <button class="rsvp-button" onclick="window.location.href='RSVP.html'">RSVP</button>
-            <div class="rsvp-text">Please RSVP by August 1st!</div>
+    <h1 class="title">The Details</h1>
+    <div class="details-container">
+        <div class="text-box">
+            <h2>Arrival and Parking</h2>
+            <p>If you are attending in person, please bring your invitation or mention you are here for the Teboe wedding at the gatehouse entrance.</p>
         </div>
     </div>
 </body>
