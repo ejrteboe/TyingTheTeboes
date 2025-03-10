@@ -64,6 +64,27 @@
             font-size: 18px;
             font-family: Georgia, serif;
         }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .overlay {
+            max-width: 90%;
+        }
+        .line1 {
+            font-size: clamp(40px, 8vw, 58px);
+        }
+        .line2 {
+            font-size: clamp(60px, 10vw, 82px);
+        }
+        .date, .location {
+            font-size: clamp(20px, 5vw, 32px);
+        }
         @media (max-width: 768px) {
             .menu-button {
                 display: block;
