@@ -168,16 +168,16 @@
     justify-content: center;
   }
 
-  /* Image scales to viewport */
-  .glightbox-container .gslide-image img {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    max-width: 100vw;
-    max-height: 100vh;
-    object-fit: contain;
-  }
+.glightbox-container .gslide-image img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  max-width: 95vw;      /* still responsive to width */
+  max-height: 86vh;     /* shrink slightly so no scroll */
+  object-fit: contain;
+}
+
 </style>
 
 
