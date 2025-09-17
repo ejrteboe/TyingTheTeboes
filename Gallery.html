@@ -106,11 +106,20 @@
             height: auto;
             padding: 0 16px;
         }
-        @media (max-width: 768px) {
-            .menu-button {
-                display: block;
+
+            .glightbox-container .gslide-image img {
+              max-width: 95vw;   /* don't exceed viewport width */
+              max-height: 90vh;  /* don't exceed viewport height */
+              width: auto;
+              height: auto;
+              object-fit: contain;
             }
-            .nav-menu {
+            
+            @media (max-width: 768px) {
+              .menu-button {
+                display: block;
+              }
+              .nav-menu {
                 display: none;
                 flex-direction: column;
                 position: fixed;
@@ -121,24 +130,18 @@
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
                 padding: 10px;
                 border-radius: 5px;
-            }
-            .nav-menu.active {
+              }
+              .nav-menu.active {
                 display: flex;
-            }
-            .nav-menu li {
+              }
+              .nav-menu li {
                 margin: 10px 0;
                 text-align: center;
+              }
             }
+        
             .thumb-grid { gap: 8px; }
             .thumb img { height: 150px; }
-            
-            .glightbox-container .gslide img {
-              max-width: 100%;
-              max-height: 100vh;  /* don’t exceed viewport height */
-              width: auto;
-              height: auto;
-              object-fit: contain;
-            }
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
