@@ -139,14 +139,23 @@
   <!-- GLightbox CSS must load BEFORE our overrides -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-  <!-- Our GLightbox overrides MUST come after its CSS -->
+  <!-- GLightbox overrides -->
   <style>
-    /* Lock page scroll while overlay is open (prevents body scrollbar) */
-    body.glightbox-open { overflow: hidden; }
+    /* Lock the page when the lightbox is open */
+    html.glightbox-open,
+    body.glightbox-open {
+      height: 100%;
+      overflow: hidden !important;
+    }
 
-    /* Keep slide media within the viewport height */
+    /* Keep slide media within the viewport and hide scrollbars */
+    .glightbox-container,
+    .glightbox-container .gslide,
     .glightbox-container .gslide-media,
-    .glightbox-container .gslide-image { max-height: 90vh; }
+    .glightbox-container .gslide-image {
+      overflow: hidden;
+      max-height: 90vh;
+    }
 
     /* Fit image neatly without forcing scrollbars */
     .glightbox-container .gslide-image img {
@@ -158,65 +167,66 @@
       display: block;
     }
   </style>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var btn = document.querySelector(".menu-button");
-            if (btn) {
-                btn.addEventListener("click", function() {
-                    document.querySelector(".nav-menu").classList.toggle("active");
-                });
-            }
-            const tpl = document.getElementById('pa-export');
-            if (tpl) {
-                const frag = tpl.content ? tpl.content.cloneNode(true)
-                                         : (function(){const d=document.createElement('div'); d.innerHTML=tpl.innerHTML; return d;})();
-                const objects = frag.querySelectorAll('object[data]');
-                const urls = Array.from(objects).map(o => o.getAttribute('data')).filter(Boolean);
-                const grid = document.getElementById('grid');
-                urls.forEach((url, i) => {
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.className = 'thumb glightbox';
-                    a.setAttribute('data-gallery', 'wedding');
-                    a.setAttribute('aria-label', `Open photo ${i+1}`);
-                    const img = document.createElement('img');
-                    img.src = url;
-                    img.loading = 'lazy';
-                    img.decoding = 'async';
-                    img.alt = '';
-                    a.appendChild(img);
-                    grid.appendChild(a);
-                });
-                GLightbox({
-                    selector: '.glightbox',
-                    touchNavigation: true,
-                    loop: true,
-                    closeButton: true
-                });
-            }
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var btn = document.querySelector(".menu-button");
+      if (btn) {
+        btn.addEventListener("click", function() {
+          document.querySelector(".nav-menu").classList.toggle("active");
         });
-    </script>
+      }
+      const tpl = document.getElementById('pa-export');
+      if (tpl) {
+        const frag = tpl.content ? tpl.content.cloneNode(true)
+                                 : (function(){const d=document.createElement('div'); d.innerHTML=tpl.innerHTML; return d;})();
+        const objects = frag.querySelectorAll('object[data]');
+        const urls = Array.from(objects).map(o => o.getAttribute('data')).filter(Boolean);
+        const grid = document.getElementById('grid');
+        urls.forEach((url, i) => {
+          const a = document.createElement('a');
+          a.href = url;
+          a.className = 'thumb glightbox';
+          a.setAttribute('data-gallery', 'wedding');
+          a.setAttribute('aria-label', `Open photo ${i+1}`);
+          const img = document.createElement('img');
+          img.src = url;
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.alt = '';
+          a.appendChild(img);
+          grid.appendChild(a);
+        });
+        GLightbox({
+          selector: '.glightbox',
+          touchNavigation: true,
+          loop: true,
+          closeButton: true
+        });
+      }
+    });
+  </script>
 </head>
 <body>
-    <div class="logo">
-        <img src="images/LogoInBlack.png" alt="Wedding Logo">
-        <button class="menu-button" aria-label="Open menu">☰</button>
-    </div>
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="TheDetails.html">The Details</a></li>
-            <li><a href="OurStory.html">Our Story</a></li>
-            <li><a href="Gallery.html">Gallery</a></li>
-            <li><a href="QA.html">Q + A</a></li>
-            <li><a href="https://www.honeyfund.com/site/TyingTheTeboes" target="_blank" rel="noopener noreferrer">Registry</a></li>
-            <li><a href="RSVP.html">RSVP</a></li>
-        </ul>
-    </nav>
-    <main class="gallery-wrap">
-        <div id="grid" class="thumb-grid" aria-live="polite"></div>
-        <template id="pa-export">
+  <div class="logo">
+    <img src="images/LogoInBlack.png" alt="Wedding Logo">
+    <button class="menu-button" aria-label="Open menu">☰</button>
+  </div>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="TheDetails.html">The Details</a></li>
+      <li><a href="OurStory.html">Our Story</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="QA.html">Q + A</a></li>
+      <li><a href="https://www.honeyfund.com/site/TyingTheTeboes" target="_blank" rel="noopener noreferrer">Registry</a></li>
+      <li><a href="RSVP.html">RSVP</a></li>
+    </ul>
+  </nav>
+  <main class="gallery-wrap">
+    <div id="grid" class="thumb-grid" aria-live="polite"></div>
+    <template id="pa-export">
           <object data="https://lh3.googleusercontent.com/pw/AP1GczOwEt7JsFRPUCJNyzcb1RO4b7aS2mGbg_wz9G_WLHZNXOXIv1FJWhn-2jEiLrXLsk1mepXDOvnttlDwvCpvBfPfRxh1T6z82kM9cik0ZhdfF5YjE1w=w1920-h1080"></object>
           <object data="https://lh3.googleusercontent.com/pw/AP1GczOsfOvqgmS0YiFde06iR6U6_SQv1bh8-ym8l6BOIErl0tKKRNtNlzvcqoqRqxXMuq3sD4tar6TLvXFFtgY571Vo1I_lkCGNc11tJ_llRnV7DHfgx1A=w1920-h1080"></object>
           <object data="https://lh3.googleusercontent.com/pw/AP1GczNpqTvS_U88AwEDhHvpSfIYxnXREDIdBMMx39yYmHhDnfgI2kvBP7DMJhccF1UoajG8JeyCbpWytToWuPPyzsVo6vXP7pkOnX4sBLQ38gDSBFAT9XE=w1920-h1080"></object>
