@@ -139,55 +139,54 @@
     <!-- GLightbox CSS must load BEFORE our overrides -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   
-    <!-- GLightbox overrides -->
-<!-- GLightbox overrides: fit-to-viewport & no inner scrollbars -->
-<style>
-  /* Don’t let the page itself scroll when the lightbox is open */
-  html.glightbox-open,
-  body.glightbox-open { overflow: hidden !important; height: 100%; }
-
-  /* Make every lightbox wrapper non-scrolling and sized to the viewport */
-  .glightbox-container,
-  .glightbox-container .ginner-container,
-  .glightbox-container .gcontent,
-  .glightbox-container .gslider,
-  .glightbox-container .gslide,
-  .glightbox-container .gslide-media,
-  .glightbox-container .gslide-image {
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden !important;
-  }
-
-  /* Center the media nicely */
-  .glightbox-container .gslide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Image always fits within the viewport */
-  .glightbox-container .gslide-image img {
-    display: block;
-    width: auto !important;
-    height: auto !important;
-    max-width: calc(100vw - 48px) !important;   /* a little breathing room */
-    max-height: calc(100vh - 48px) !important;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-
-  /* Hide any stubborn inner scrollbars some browsers add */
-  .glightbox-container .ginner-container,
-  .glightbox-container .gcontent {
-    -ms-overflow-style: none;      /* IE/Edge legacy */
-    scrollbar-width: none;         /* Firefox */
-  }
-  .glightbox-container .ginner-container::-webkit-scrollbar,
-  .glightbox-container .gcontent::-webkit-scrollbar {
-    width: 0; height: 0; display: none;          /* WebKit */
-  }
-</style>
+    <!-- GLightbox overrides: fit-to-viewport & no inner scrollbars -->
+    <style>
+      /* Don’t let the page itself scroll when the lightbox is open */
+      html.glightbox-open,
+      body.glightbox-open { overflow: hidden !important; height: 100%; }
+    
+      /* Make every lightbox wrapper non-scrolling and sized to the viewport */
+      .glightbox-container,
+      .glightbox-container .ginner-container,
+      .glightbox-container .gcontent,
+      .glightbox-container .gslider,
+      .glightbox-container .gslide,
+      .glightbox-container .gslide-media,
+      .glightbox-container .gslide-image {
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden !important;
+      }
+    
+      /* Center the media nicely */
+      .glightbox-container .gslide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      /* Image always fits within the viewport */
+      .glightbox-container .gslide-image img {
+        display: block;
+        width: auto !important;
+        height: auto !important;
+        max-width: calc(100vw - 48px) !important;   /* a little breathing room */
+        max-height: calc(100vh - 48px) !important;
+        object-fit: contain;
+        margin: 0 auto;
+      }
+    
+      /* Hide any stubborn inner scrollbars some browsers add */
+      .glightbox-container .ginner-container,
+      .glightbox-container .gcontent {
+        -ms-overflow-style: none;      /* IE/Edge legacy */
+        scrollbar-width: none;         /* Firefox */
+      }
+      .glightbox-container .ginner-container::-webkit-scrollbar,
+      .glightbox-container .gcontent::-webkit-scrollbar {
+        width: 0; height: 0; display: none;          /* WebKit */
+      }
+    </style>
 
   
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
